@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <title>Document</title>
+
+    <script>
+        function init()
+        {
+            window.navigator.geolocation.getCurrentPosition(current_position);
+        }
+         
+        function current_position(position)
+        {
+            var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            
+            var map_options = {
+                center:latlng,zoom:14,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+                mapTypeControl:false,
+                navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+            }
+            
+            var map = new google.maps.Map(document.getElementById("google_map"), map_options);
+            
+            var marker = new google.maps.Marker({position:latlng,map:map,title:"You are here!"});
+        }
+        window.addEventListener("load", init);
+        </script>
+        
+</head>
+<body>
+    <!-- <script>
+        function init()
+        {
+            window.navigator.geolocation.getCurrentPosition(current_position);
+        }
+         
+        function current_position(position)
+        {
+            var msg;
+            
+            msg = "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude;
+            
+            alert(msg); 
+            
+        }
+         
+        window.addEventListener("load", init); 
+    </script> -->
+    <!-- 위 코드 결과는 // Latitude: 35.951710299999995, Longitude: 127.0078127 나의 PC 위치 -->
+
+    <body>
+        <div id="google_map" style="width:500px;height:500px;"></div>
+    </body>
+        
+</body>
+</html>
