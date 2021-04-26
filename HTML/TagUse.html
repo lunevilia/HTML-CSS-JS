@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+		<h1>전체 문서에 대한 헤더(header)입니다.</h1>
+	</header>
+
+    <nav>
+		<a href="/html/html5_element_semantic">의미 요소</a> |
+		<a href="/html/html5_element_form">Forms 요소</a> |
+		<a href="/html/html5_element_inputtype">Input 요소</a>
+	</nav>
+
+    <section>
+		<header>
+			<h2>섹션 부분에 대한 헤더(header)입니다.</h2>
+			<p>헤더 부분에 들어간 단락입니다.</p>
+		</header>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis sapien ut felis lacinia eleifend. Aliquam est lectus, iaculis ultrices fringilla et, sollicitudin nec risus. In pretium metus in risus elementum, sit amet lobortis velit vulputate. Sed non ipsum suscipit, condimentum augue eu, cursus lacus. Nulla mattis metus et sapien consequat euismod. Nunc luctus nibh at dapibus rhoncus. In hac habitasse platea dictumst.
+		</p>
+	</section>
+
+    <article>
+
+        <h2>기사(article) 영역입니다.</h2>
+    
+        <p>Lorem ipsum</p>
+        <form action="/examples/media/request.php">
+            <input list="lectures" name="lecture">
+                <datalist id="lectures">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JAVA">
+                    <option value="C++">
+                </datalist>
+            <input type="submit" value="전송">
+        </form>
+
+        <form oninput="total.value=parseInt(value01.value)/parseInt(value02.value)">
+            <input type="number" id="value01" name="input01" value="20">
+            /
+            ( 0
+            <input type="range" id="value02" name="input02" value="50" min="0" max="100">
+            100 )
+            =
+            <output name="total" for="value01 value02"></output><br><br>
+        </form>
+        <form action="/examples/media/request.php">
+            여러분이 가장 좋아하는 숫자는 몇인가요?<br>
+            (단, 1부터 9까지에서 골라주세요!)<br><br>
+            <input type="number" name="favnum" min="1" max="9">
+            <input type="submit" value="전송">
+        </form>
+        <form oninput="total.value=(value03.value)">
+            <p>0 <input type="range" name="favnum" min="1" max="9"> 9</p>
+            <p><input type="color" id="value03" name="favcolor" value="#CC6600"> <output name="total" for="value03"></output><br> </p>
+            <p><input type="date" name="theday" min="1977-01-01" max="2020-12-31"></p>
+            <p><input type="time" name="birthtime"></p>
+            <p>날짜 & 시간<input type="datetime-local" name="starttime"></p>
+            <p>연도 & 월<input type="month" name="birthmonth"></p>
+            <p>연도 & 주 <input type="week" name="nthweek"></p>
+            <p>이메일<input type="email" name="email"></p>
+            <p>URL <input type="url" name="url"></p>
+            <p>전화번호 <input type="tel" name="tel"></p>
+            <p>검색어 입력 <input type="search" name="keyword"></p>
+        </form>
+    
+    </article>
+
+    <figure>
+
+        <img src="https://cdn.crowdpic.net/detail-thumb/thumb_d_9ECB8E94B8CF9A1A857CBAE0D49922C0.jpg" alt="flowers" width="350" height="263">
+    
+        <figcaption>[ 그림 1. 위의 그림은 이쁜 꽃이네요! ]</figcaption>
+    
+    </figure>
+
+    <footer>
+
+        <p>전체 문서에 대한 푸터(footer)입니다.</p>
+    
+        <p>Copyright 2016. 지은이 all rights reserved.</p>
+    
+        <p>연락처 : 02-1234-5678</p>
+    
+    </footer>
+    
+    
+</body>
+</html>
