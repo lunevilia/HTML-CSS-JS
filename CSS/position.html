@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Flexible Box Layout</title>
+	<style>
+		.flexbox {
+			background-color: dimgray;
+			width: 400px;
+			height: 250px;
+			border-radius: 15px;
+			display: -webkit-flex;
+			display: flex;
+		}
+		#center {
+			-webkit-justify-content: center;
+			justify-content: center;
+		}
+		#between {
+			-webkit-justify-content: space-between;
+			justify-content: space-between;
+		}
+		#around {
+			-webkit-justify-content: space-around;
+			justify-content: space-around;
+		}
+		.item {
+			background-color: darkgray;
+			border-radius: 10px;
+			width: 80px;
+			height: 50px;
+			margin: 10px;
+			color: white;
+			font-size: 26px;
+			text-align: center;
+			line-height: 50px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>justify-content 속성을 이용한 수평 정렬</h1>
+
+	<h3>justify-content의 속성값이 center입니다.</h3>
+	<div id="center" class="flexbox">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+	<h3>justify-content의 속성값이 space-between입니다.</h3>
+	<div id="between" class="flexbox">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+	<h3>justify-content의 속성값이 space-around입니다.</h3>
+	<div id="around" class="flexbox">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+	</div>
+
+</body>
+
+</html>
