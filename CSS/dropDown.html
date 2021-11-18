@@ -32,7 +32,7 @@
             display: inline-block;
         }
         .dropdowns-content {
-            display: none;
+            display: none; /* 이 부분이 안보이는 핵심 */
             position: absolute;
             background-color: #FFDAB9;
             min-width: 75px;
@@ -43,10 +43,11 @@
             color: black;
             padding: 8px;
             text-decoration: none;
-            
+            display:block;
         }
         .dropdowns-content a:hover {background-color: #CDB53F;}
         .dropdowns:hover .dropdowns-content {display:block;}
+        /* displaycontent(div)의 display:none 에서 block으로 변경하면서 hover시 눈에 보인다. */
         .dropdowns:hover .dropdown-button {background-color: #CDB53F;}
     </style>
 </head>
