@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDownCheck</title>
+    <style>
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: relative;
+            
+            padding: 8px;
+            box-shadow: 0px 8px 15px 0px rgba(0, 0, 0,0.2);
+        }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .dropdown-button{
+            background-color: #FFDAB9;
+            padding: 8px;
+            font-size: 15px;
+            border: none;
+        }
+
+        
+        .dropdowns {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdowns-content {
+            display: none;
+            position: absolute;
+            background-color: #FFDAB9;
+            min-width: 75px;
+            padding: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        .dropdowns-content a {
+            color: black;
+            padding: 8px;
+            text-decoration: none;
+            
+        }
+        .dropdowns-content a:hover {background-color: #CDB53F;}
+        .dropdowns:hover .dropdowns-content {display:block;}
+        .dropdowns:hover .dropdown-button {background-color: #CDB53F;}
+    </style>
+</head>
+<body>
+    <h1>드롭다운 효과</h1>
+    <div class = "dropdown">
+        <span>여기에 마우스를 올려보자</span>
+        <div class = "dropdown-content">
+            <p>마우스를 올려야 나타나는 div 요소</p>
+        </div>
+    </div>
+
+    <h1>드롭다운 메뉴</h1>
+    <div class = "dropdowns">
+        <button class = "dropdown-button">DropDown</button>
+        <div class = "dropdowns-content">
+            <a href = "#">HTML</a>
+            <a href = "#">CSS</a>
+            <a href = "#">JAVA</a>
+            <a href = "#">C++</a>
+        </div>
+    </div>
+</body>
+</html>

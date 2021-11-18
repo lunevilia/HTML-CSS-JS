@@ -13,7 +13,11 @@
             padding: 0;
             overflow: hidden;
         }
-        li { float: left;}
+        li { 
+            float: left;
+            border: 1px solid white;
+        }
+            
         li a{
             display: block;
             background-color: #FFDAB9;
@@ -23,26 +27,30 @@
             text-align: center;
             font-weight: bold;
         }
-        li a current {
+        li a.current {
             background-color:#FF6347;
             color: white;
         }
         li a:hover:not(.current){
-            background-color: #CD853F;
+            background-color: #6e471f;
             color: white;
         }
     </style>
 </head>
 <body>
-    <div>
+    <h1>수평 네비게이션 테스트</h1>
         <ul>
-            <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_08">Home</a></li>
-            <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_08">HTML</a></li>
-            <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_08">CSS</a></li>
-            <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_08">JS</a></li>
-
+            <li><a href = "1">Home</a></li>
+            <li><a href = "2">HTML</a></li>
+            <li><a href = "3" class = "current">CSS</a></li>
+            <li><a href = "4">JS</a></li>
+            <ul style = "float:right; list-style-type:none;">
+                <li><a>로그인</a></li>
+                <li><a>회원가입</a></li>
+    
+            </ul>
         </ul>
-    </div>
+   
     
 </body>
 </html>
