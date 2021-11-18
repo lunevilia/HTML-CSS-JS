@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NevigationBar</title>
+    <style>
+        ul {
+            background-color: brown;
+            width: 150px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border: solid 1px black;
+        }
+        li { border-bottom: solid 1px black;}
+        li:last-child {border-bottom: none;}
+        li a {
+            display: block;
+            color: #000000;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        li a.current {
+            background-color: #FF6347;
+            color: white;
+        }
+        li a:hober:not(.current) {
+            background-color: #CD853F;
+            color: white;
+        }
+    </style>
+</head> 
+<body>
+    <h1>
+        메뉴 간 경계선 표현
+    </h1>
+    <ul>
+        <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_04">Home</a></li>
+        <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_04">Html</a></li>
+        <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_04">CSS</a></li>
+        <li><a href = "http://www.tcpschool.com/examples/tryit/tryhtml.php?filename=css_advanced_navigation_04">JS</a></li>
+
+    </ul>
+    
+</body>
+</html>
