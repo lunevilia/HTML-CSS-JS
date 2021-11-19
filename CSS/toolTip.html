@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tooltip1 {
+            position: relative;
+            display:inline-block;
+        }
+        .tooltip1 .tooltip-content1 {
+            visibility: hidden;
+            width: 300px;
+            background-color:orange;
+            padding: 0;
+            margin-top: 10px;
+            color: white;
+            position: absolute;
+            z-index: 1;
+        }
+        .tooltip1:hover .tooltip-content1 {visibility: visible;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>툴팁 효과 1</h1>
+        <div class = "tooltip1">
+            <span>마우스 올리기 1</span>
+            <div class = "tooltip-content1">
+                <p>mounse curser use visible</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1>툴팁 효과 2</h1>
+        <div>
+            <span>마우스 올리기 1</span>
+            <div class = "tooltip-content">
+                <p>mounse curser use visible</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
