@@ -27,13 +27,20 @@
             font-size: 20px;
         }
         input[type="text"] {
-            border : none;
-            border-bottom: 2px solid #1873c9;
+            -webkit-transition: 0.5s;
+            
+            transition: 0.5s;
+            border: 2px solid #1873c9;
+            outline: none;
+            border-radius: 8px;
         }
+        input[type="text"]:focus { border: 2px solid #D2691E; }
         input[type = "password"]{
             border : 2px solid rgb(224, 184, 50);
             border-radius: 8px;
+            transition: 0.5s;
         }
+        input[type="password"]:focus {background-color: #c7cece; }
     </style>
 </head>
 <body>
