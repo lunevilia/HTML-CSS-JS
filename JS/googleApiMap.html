@@ -11,7 +11,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=secretKey&callback=initMap&region=kr"></script>
   <script>
     function initMap() {
-      var seoul = { lat: 37.5642135, lng: 127.0016985 };
+      var seoul = { lat: 36.3887471, lng: 127.3512312 };
       var map = new google.maps.Map(
         document.getElementById('map'), {
         zoom: 12,
@@ -25,16 +25,16 @@
     var map;
     //AIzaSyB7raY4efUg6mjCml9kmoNgzPKXIGDFKps
     function initMap() {
-      var seoul = { lat: 37.5642135, lng: 127.0016985 };
+      var daejeon = { lat: 36.3887471, lng: 127.3512312 };
       map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
-        center: seoul
+        center: daejeon
       });
 
       new google.maps.Marker({
-        position: seoul,
+        position: daejeon,
         map: map,
-        label: "서울 중심 좌표"
+        label: "대전 유성구 신성남로"
       });
     }
   </script>
