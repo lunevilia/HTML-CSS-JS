@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Google Map</title>
+</head>
+
+<body>
+  <div id="map" style="width:100%; height: 100vh;"></div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=secretKey&callback=initMap&region=kr"></script>
+  <script>
+    function initMap() {
+      var seoul = { lat: 37.5642135, lng: 127.0016985 };
+      var map = new google.maps.Map(
+        document.getElementById('map'), {
+        zoom: 12,
+        center: seoul
+      });
+
+    }
+  </script>
+  <script>
+    // script.js
+    var map;
+    //AIzaSyB7raY4efUg6mjCml9kmoNgzPKXIGDFKps
+    function initMap() {
+      var seoul = { lat: 37.5642135, lng: 127.0016985 };
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: seoul
+      });
+
+      new google.maps.Marker({
+        position: seoul,
+        map: map,
+        label: "서울 중심 좌표"
+      });
+    }
+  </script>
+</body>
+
+</html>
