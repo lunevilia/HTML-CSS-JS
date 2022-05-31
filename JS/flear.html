@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Google Map</title>
+</head>
+
+<body>
+    <div id="map" style="width:100%; height: 100vh;"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=secretKey&callback=initMap&region=kr"></script>
+    <script>
+        function initMap() {
+            var seoul = { lat: 36.3887471, lng: 127.3512312 };
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                zoom: 12,
+                center: seoul
+            });
+
+        }
+    </script>
+    <script>
+        // script.js
+        var map;
+        //AIzaSyB7raY4efUg6mjCml9kmoNgzPKXIGDFKps
+        function initMap() {
+            var daejeon = { lat: 36.3887471, lng: 127.3512312 };
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: daejeon
+            });
+
+            new google.maps.Marker({
+                position: daejeon,
+                map: map,
+                label: "대전 유성구 신성남로"
+            });
+        }
+    </script>
+</body>
+
+</html>
