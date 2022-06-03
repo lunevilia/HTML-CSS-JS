@@ -6,18 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
-        function Colors() {
+        $(document).ready(function () {
             const r = Math.floor(Math.random() * 256);
-            const g = Math.fllor(Math.random() * 256);
-            const b = Math.fllor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
 
-            var color = document.getElementById("rgbTitle");
-            color.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            var cols = $("#rgbTitle");
 
-        }
-        Colors();
+            var backColors = "rgb(" + r + "," + g + "," + b + ")";
+            cols.text(backColors);
+            cols.css('backgroundColor', backColors);
+        })
+
     </script>
+    <style>
+        #rgbTitle {
+            width: 300px;
+            height: 300px;
+            padding: 50px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
